@@ -1,9 +1,10 @@
-import react from 'react'
+import react, {useState} from 'react'
 import Table from 'react-bootstrap/table';
 import { Link } from 'react-router-dom'
 import validation from './validation';
 
-function Login() {
+
+export default function Login() {
     const [values, setValues] = useState({
         email: '',
         password: ''
@@ -14,7 +15,7 @@ function Login() {
     }
     const handleSubmit =(event) =>{
         event.preventDefault();
-        setErrors(Validation(values));
+        //setErrors(Validation(values));
     }
 
   return (
