@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/table';
 import { Link } from 'react-router-dom'
 import signupvalidation from './signupvalidation';
 
-export default function signup() {
+export default function Signup() {
        const [values, setValues] = useState({
            name: '',
            email: '',

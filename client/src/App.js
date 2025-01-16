@@ -2,7 +2,7 @@
 import './App.css';
 import Login from './Login.js'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Signup from './signup'
+import Signup from './Signup.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React, {useState} from 'react';
 import TodoList from './Component/TodoList/TodoList.jsx';
