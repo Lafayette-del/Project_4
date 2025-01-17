@@ -19,7 +19,7 @@ export default function Login() {
     }
 
   return (
-    <div classname='d-flex justify-content-center align-items-center bg primary vh-50'>
+    <div classname='d-flex justify-content-center align-items-center bg primary vh-100'>
         <div classname='bg-white p-3 rounded w-25'>
             <h2>Log-In</h2>
             <form action="" onSubmit={handleSubmit}>

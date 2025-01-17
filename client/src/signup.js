@@ -3,6 +3,7 @@ import Table from 'react-bootstrap/table';
 import { Link } from 'react-router-dom'
 import signupvalidation from './signupvalidation';
 
+
 export default function Signup() {
        const [values, setValues] = useState({
            name: '',
@@ -30,7 +31,7 @@ export default function Signup() {
                     </div>
                     <div classname= 'mb-3'>
                         <label htmlFor="email">Email</label>
-                        <input type="email" placeholder='Enter email'name= 'email'
+                        <input type="email" placeholder='Enter Email'name= 'email'
                         onChange={handleInput} classname='form-control rounded-0'/>
                         {errors.email && <span classname='text-danger' > {errors.email}</span>}
                     </div>
@@ -40,7 +41,7 @@ export default function Signup() {
                         onChange={handleInput} classname='form-control rounded-0'/>
                         {errors.password && <span classname='text-danger' > {errors.password}</span>}
                     </div>
-                    <button type= 'submit' classname= 'btn btn-success'> Sign up</button>
+                    <button type= "submit" classname= 'btn btn-success'> Sign up</button>
                     <p>You Agree to the terms and conditions</p>
                     <Link to="/Login" classname='btn btn-default border'>Login</Link>
                 </form>

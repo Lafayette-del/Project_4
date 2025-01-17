@@ -11,7 +11,7 @@ import NavbarMenu from './Component/NavbarMenu/NavbarMenu.jsx';
       
 function App() {
 
-  const Initialtodos =  [
+    const Initialtodos =  [
     {todo_date:"2024/12/12", todo_text:"Study React", isCompleted: false},
     {todo_date:"2024/10/12", todo_text:"Study HTML", isCompleted: true},
     {todo_date:"2024/01/01", todo_text:"Data Structure", isCompleted: true},
@@ -20,10 +20,10 @@ function App() {
 
   return (
     <BrowserRouter>
-    <NavbarMenu / >
+    <NavbarMenu />
       <Routes>
           <Route path='/login' element={<Login />}></Route>
-          <Route path='/signup' element={<signup />}></Route>
+          <Route path='/signup' element={<Signup />}></Route>
           <Route path='/todos' element={<TodoList todos={todos} setTodos={setTodos} />}></Route>
       </Routes>
     </BrowserRouter>
