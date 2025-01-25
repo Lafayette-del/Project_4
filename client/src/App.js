@@ -16,7 +16,7 @@ function App() {
     {todo_date:"2024/01/01", todo_text:"Data Structure", isCompleted: true},
   ]
   const [todos, setTodos] = useState(Initialtodos);
-
+    
   return (
     <BrowserRouter>
     <NavbarMenu />
