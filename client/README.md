@@ -31,10 +31,9 @@ Environment Management: dotenv
 Screenshots
 
 # Home Page
-![alt text](<Screenshot 2025-01-25 at 2.12.21 PM.png>)
-
-# Adding a Task
-# Task List View
+[sign-up page](image.png)
+![Log-in page](image-1.png)
+![To-Do list](image-2.png)
 
 # USER STORIES
 -AS A USER I WOULD LIKE TO BE ABLE TO UPDATE ITEMS ON THE LIST.
