@@ -1,8 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import userRouts from './Routes/user.js'
-import db from './dbConnection.js';
-
+import db from '../dbConnection.js';
 
 
 const app = express();
