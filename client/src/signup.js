@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Signup() {
     const [formData, setFormData] = useState({
-        name: '',
+        username: '',
         email: '',
         password: '',
     });
@@ -21,20 +21,9 @@ export default function Signup() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const validationErrors = signupvalidation(formData);
-        if (Object.keys(validationErrors).length > 0) {
-            setErrors(validationErrors);
-            return;
-        }
-
         try {
-            const response = await axios.get("http://localhost:3002/users/", {
-                params: {
-                    user_name: formData.name,
-                    user_email: formData.email,
-                    user_password: formData.password,
-                },
-            });
+            const response = await axios.post("http://localhost:3002/users/", formData);
+            console.log(formData.username, formData.email, formData.password)
             console.log(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -51,7 +40,7 @@ export default function Signup() {
                         <input
                             type="text"
                             placeholder="Enter Name"
-                            name="name"
+                            name="username"
                             onChange={handleInput}
                             className="form-control rounded-0"
                         />

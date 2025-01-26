@@ -18,13 +18,6 @@ export default function Login() {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        // Run validation
-        const validationErrors = validation(formData);
-        if (Object.keys(validationErrors).length > 0) {
-            setErrors(validationErrors);
-            return;
-        }
-
         try {
             const response = await axios.get("http://localhost:3002/users/", {
                 params: {
@@ -32,6 +25,8 @@ export default function Login() {
                     password: formData.password,
                 },
             });
+            console.log (formData.email)
+            console.log (formData.password)
             console.log(response.data);
         } catch (error) {
             console.error("Error during login:", error);
