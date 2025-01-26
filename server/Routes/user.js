@@ -4,8 +4,8 @@ import db from '../dbConnection.js'
 const Router = express.Router()
 
 Router.get ("/", (req,res)=> {
-    const {username, password} = req.query
-    db.query ("SELECT * FROM  WHERE username = ? AND password= ? ", [username, password],  (err,result)=> {
+    const {email, password} = req.query
+    db.query ("SELECT * FROM users  WHERE email = ? AND password= ? ", [email, password],  (err,result)=> {
         if (err) {
             console.log ("Error in Listening Users:", err)
         }
@@ -16,8 +16,11 @@ Router.get ("/", (req,res)=> {
 })
 
 Router.post('/', (req, res) => {
-    const { name, password } = req.body; // Get data from body
-    db.query("INSERT INTO users (name, password) VALUES (?, ?)",[name, password],
+    const { username, email, password } = req.body; // Get data from body
+    console.log("red.body:", req.body)
+    console.log(username, email, password)
+
+    db.query("INSERT INTO users (username, email, password) VALUES (?, ?, ?)",[username, email, password],
              (err, result) => {
         if (err) res.status(500).send('Error adding user');
         else res.status(201).send('User added successfully');
