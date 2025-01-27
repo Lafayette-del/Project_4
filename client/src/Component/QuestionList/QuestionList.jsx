@@ -4,13 +4,14 @@ import './questionlist.css';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 export default function QuestionList() {
     const [questions, setQuestions] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/questions')
+        axios.get('http://localhost:3002/questions')
             .then((response) => {
                 setQuestions(response.data);
                 setLoading(false);

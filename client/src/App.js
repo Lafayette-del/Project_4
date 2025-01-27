@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavbarMenu from './Component/NavbarMenu/NavbarMenu.jsx';
 import Login from './Login.js';
 import Signup from './Signup.js';
-import QuestionList from './components/QuestionList';
+import QuestionList from './Component/QuestionList/QuestionList.jsx';
 import TodoList from './Component/TodoList/TodoList.jsx';
       
 function App() {
