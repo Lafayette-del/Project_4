@@ -39,7 +39,7 @@ Router.get("/:id", (req, res) => {
     const { id } = req.params;
 
     db.query(
-        "SELECT * FROM answers WHERE id = ?",
+        "SELECT * FROM Answers WHERE id = ?",
         [id],
         (err, result) => {
             if (err) {
@@ -59,11 +59,11 @@ Router.post("/", (req, res) => {
     const { question_id, answer_text } = req.body;
 
     if (!question_id || !answer_text) {
-        return res.status(400).json({ message: "Question ID and answer text are required" });
+        return res.status(400).json({ message: "Question ID and Answer text are required" });
     }
 
     db.query(
-        "INSERT INTO answers (question_id, answer_text) VALUES (?, ?)",
+        "INSERT INTO Answers (question_id, answer_text) VALUES (?, ?)",
         [question_id, answer_text],
         (err, result) => {
             if (err) {
@@ -85,7 +85,7 @@ Router.put("/:id", (req, res) => {
     }
 
     db.query(
-        "UPDATE answers SET answer_text = ? WHERE id = ?",
+        "UPDATE Answers SET answer_text = ? WHERE id = ?",
         [answer_text, id],
         (err, result) => {
             if (err) {
@@ -105,7 +105,7 @@ Router.delete("/:id", (req, res) => {
     const { id } = req.params;
 
     db.query(
-        "DELETE FROM answers WHERE id = ?",
+        "DELETE FROM Answers WHERE id = ?",
         [id],
         (err, result) => {
             if (err) {
