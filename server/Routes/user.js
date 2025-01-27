@@ -28,5 +28,34 @@ Router.post('/', (req, res) => {
     );
   });
 
+  Router.get("/questions", (req, res) => {
+    db.query("SELECT * FROM questions", (err, results) => {
+        if (err) {
+            console.error("Error fetching questions:", err);
+            return res.status(500).json({ message: "Error fetching questions" });
+        }
+        res.json(results);
+    });
+});
+
+// Route to get a question by ID
+Router.get("/questions/:id", (req, res) => {
+    const { id } = req.params;
+
+    db.query(
+        "SELECT * FROM questions WHERE id = ?",
+        [id],
+        (err, result) => {
+            if (err) {
+                console.error("Error fetching question:", err);
+                return res.status(500).json({ message: "Error fetching question" });
+            }
+            if (result.length === 0) {
+                return res.status(404).json({ message: "Question not found" });
+            }
+            res.json(result[0]);
+        }
+    );
+});
 
 export default Router;
