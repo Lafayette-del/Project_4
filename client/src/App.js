@@ -6,6 +6,7 @@ import NavbarMenu from './Component/NavbarMenu/NavbarMenu.jsx';
 import Login from './Login.js';
 import Signup from './Signup.js';
 import QuestionList from './Component/QuestionList/QuestionList.jsx';
+import AnswerList from './components/AnswerList/AnswerList.jsx';
 import TodoList from './Component/TodoList/TodoList.jsx';
       
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/signup' element={<Signup />}></Route>
           <Route path='/todos' element={<TodoList todos={todos} setTodos={setTodos} />}></Route>
           <Route path="/question" element={<QuestionList />} />
+          <Route path="/answers" element={<AnswerList />} />
       </Routes>
     </BrowserRouter>
   )
