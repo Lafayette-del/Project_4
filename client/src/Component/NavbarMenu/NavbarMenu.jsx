@@ -13,6 +13,7 @@ export default function NavbarMenu() {
           <Nav.Link href="/todos">Todolist</Nav.Link>
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/signup">Signup</Nav.Link>
+          <Nav.Link href="/question">Questions</Nav.Link>
           
         </Nav>
       </Navbar.Collapse>

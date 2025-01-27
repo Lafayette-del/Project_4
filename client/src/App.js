@@ -1,12 +1,12 @@
 
 import './App.css';
-import Login from './Login.js'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Signup from './Signup.js'
-import React, {useState} from 'react';
-import TodoList from './Component/TodoList/TodoList.jsx';
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavbarMenu from './Component/NavbarMenu/NavbarMenu.jsx';
-
+import Login from './Login.js';
+import Signup from './Signup.js';
+import QuestionList from './components/QuestionList';
+import TodoList from './Component/TodoList/TodoList.jsx';
       
 function App() {
 
@@ -24,6 +24,7 @@ function App() {
           <Route path='/login' element={<Login />}></Route>
           <Route path='/signup' element={<Signup />}></Route>
           <Route path='/todos' element={<TodoList todos={todos} setTodos={setTodos} />}></Route>
+          <Route path="/question" element={<QuestionList />} />
       </Routes>
     </BrowserRouter>
   )
