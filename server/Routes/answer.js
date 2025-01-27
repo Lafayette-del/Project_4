@@ -5,7 +5,7 @@ const Router = express.Router();
 
 // Route to get all answers
 Router.get("/", (req, res) => {
-    db.query("SELECT * FROM Answers", (err, results) => {
+    db.query("SELECT * FROM Answer", (err, results) => {
         if (err) {
             console.error("Error fetching answers:", err);
             return res.status(500).json({ message: "Error fetching answers" });
@@ -19,7 +19,7 @@ Router.get("/question/:questionId", (req, res) => {
     const { questionId } = req.params;
 
     db.query(
-        "SELECT * FROM Answers WHERE question_id = ?",
+        "SELECT * FROM Answer WHERE question_id = ?",
         [questionId],
         (err, results) => {
             if (err) {
@@ -39,7 +39,7 @@ Router.get("/:id", (req, res) => {
     const { id } = req.params;
 
     db.query(
-        "SELECT * FROM Answers WHERE id = ?",
+        "SELECT * FROM Answer WHERE id = ?",
         [id],
         (err, result) => {
             if (err) {
@@ -63,7 +63,7 @@ Router.post("/", (req, res) => {
     }
 
     db.query(
-        "INSERT INTO Answers (question_id, answer_text) VALUES (?, ?)",
+        "INSERT INTO Answer (question_id, Answer_text) VALUES (?, ?)",
         [question_id, answer_text],
         (err, result) => {
             if (err) {
@@ -85,7 +85,7 @@ Router.put("/:id", (req, res) => {
     }
 
     db.query(
-        "UPDATE Answers SET answer_text = ? WHERE id = ?",
+        "UPDATE Answer SET Answer_text = ? WHERE id = ?",
         [answer_text, id],
         (err, result) => {
             if (err) {
@@ -105,7 +105,7 @@ Router.delete("/:id", (req, res) => {
     const { id } = req.params;
 
     db.query(
-        "DELETE FROM Answers WHERE id = ?",
+        "DELETE FROM Answer WHERE id = ?",
         [id],
         (err, result) => {
             if (err) {
