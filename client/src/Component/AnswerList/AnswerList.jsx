@@ -46,7 +46,7 @@ export default function AnswerList() {
                         {answers.map((answer, index) => (
                             <tr key={answer.id}>
                                 <td>{index + 1}</td>
-                                <td>{answer.answer_text}</td>
+                                <td>{answer.answer_body}</td>
                                 <td>{answer.question_id}</td>
                                 <td>{new Date(answer.created_at).toLocaleString()}</td>
                             </tr>
