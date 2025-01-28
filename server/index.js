@@ -13,7 +13,7 @@ app.use(cors({ origin: "http://localhost:3000" }));
 
 app.use ('/users', userRouts)
 app.use ('/questions', questionRouts)
-app.use ('answers', answerRouts)
+app.use ('/answers', answerRouts)
 
   app.get ('/', (req,res)=> {
     res.send ("The main server Running")
