@@ -14,7 +14,7 @@ export default function NavbarMenu() {
           <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/signup">Signup</Nav.Link>
           <Nav.Link href="/question">Questions</Nav.Link>
-          
+          <Nav.Link href="/answer">Answer</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
