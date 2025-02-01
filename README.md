@@ -1,6 +1,4 @@
 # Project_4
-
-# Project_4
 TO DO LIST
 ## Description
 To-Do List is a lightweight task management application designed to help users organize their day-to-day activities. This app allows you to add, edit, and delete tasks, mark them as completed, and organize them by categories or deadlines. It’s simple, intuitive, and effective.
