@@ -1,5 +1,5 @@
 # Project_4
-TO DO LIST
+To-Do List
 ## Description
 To-Do List is a lightweight task management application designed to help users organize their day-to-day activities. This app allows you to add, edit, and delete tasks, mark them as completed, and organize them by categories or deadlines. It’s simple, intuitive, and effective.
 Usage
@@ -51,11 +51,6 @@ CREATE TABLE `users` (
   PRIMARY KEY (`user_ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-# Home Page
-![sign-up page](image.png)
-![Log-in page](image-1.png)
-![To-Do list](image-2.png)
 
 
 
