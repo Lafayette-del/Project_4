@@ -31,11 +31,26 @@ Styling: CSS and Bootstrap
 Environment Management: dotenv
 
 Screenshots
+# Mysql Tables 
+ CREATE TABLE `Question` (
+  `idQuestion` int NOT NULL,
+  `question` varchar(45) NOT NULL,
+  `category` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idQuestion`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `Answer` (
+  `idAnswer` int NOT NULL,
+  `answer` varchar(45) NOT NULL,
+  PRIMARY KEY (`idAnswer`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 # Home Page
 ![sign-up page](image.png)
 ![Log-in page](image-1.png)
 ![To-Do list](image-2.png)
+
+
 
 # USER STORIES
 -AS A USER I WOULD LIKE TO BE ABLE TO UPDATE ITEMS ON THE LIST.
